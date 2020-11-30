@@ -1,9 +1,9 @@
 # ProvaRNP
- O projeto consiste de dois cadastros, sendo um para Devices (D) e outro para Grupo de Devices(G).
+ O projeto consiste de dois cadastros, sendo um para Devices e outro para Grupo de Devices.
  
- Grupo de Devices é FK de Devices e a exclusão de um objeto G implica em excluir todos os objetos D associados a ele.
+ Grupo de Devices é FK de Devices e a exclusão de um objeto Grupo implica em excluir todos os objetos Device associados a ele.
  
- Na a página inicial são listados todos os os GD e a possibilidade de cadastrar novos grupos ao lado da barra de pesquisa.
+ Na a página inicial são listados todos os Grupos e a possibilidade de cadastrar novos Grupos ao lado da barra de pesquisa.
  
  A listagem dos Grupos cadastrados é feita em caixas que exibem nome e descrição do Grupo e cada caixa apresenta 4 opções, sendo elas:
  1-"Cadastrar": Permite cadastrar um novo Device para aquele grupo. 
