@@ -38,7 +38,7 @@
 
 
 
-<b>
+<br>
     
 
 -Django administration: Username: master / Password: admin.
