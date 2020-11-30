@@ -30,8 +30,6 @@
 
 
 OBS: 
- -Django administration
-  Username: master
-  Password: admin
+ -Django administration: Username: master / Password: admin.
 
 
