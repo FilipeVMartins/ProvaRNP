@@ -5,7 +5,7 @@
  
  Na a página inicial são listados todos os Grupos e a possibilidade de cadastrar novos Grupos ao lado da barra de pesquisa.
  
- 
+ <br>
  
  
  A listagem dos Grupos cadastrados é feita em caixas que exibem nome e descrição do Grupo e cada caixa apresenta 4 opções, sendo elas:
@@ -19,8 +19,7 @@
  4- "Excluir Grupo": Permite excluir um Grupo cadastrado.
  
  
- 
- 
+ <br>
  
  A opção Listar de cada caixa de um Grupo acima irá exibir em nova tela todos os Devices cadastrados para aquele grupo, em caixas, contendo suas informações cadastradas e cada caixa apresentando 2 opções, sendo elas:
  
@@ -36,11 +35,10 @@
 
 
 
-
+<br>
 
 <br>
     
-
 -Django administration: Username: master / Password: admin.
 
 
