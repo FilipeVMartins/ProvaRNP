@@ -1,0 +1,101 @@
+{% block gruporouterblock %}
+
+	
+<div class="corposup">
+	<h1 style="float:left">Página Inicial</h1>
+	<a href="/cadastrargrupo" class="acadastrargrupos" id="acadastrargrupos">Cadastrar Grupo</a></li>
+	<div class="search-container">
+		<form action="/home">
+			<input type="text" placeholder="Pesquisar Grupos" name="search">
+			<button type="submit">Buscar</button>
+		</form>
+	</div>
+</div>
+
+<div id="corpoinf" class="corpoinf">
+
+
+	{% for grupo in grupo_list %}
+
+	<div class="boxgrupo">
+
+		<div class="titulo">
+			<h3>{{grupo.nome}}<h3>
+		</div>
+
+		<div class="descricao">
+			<p> {{grupo.descricao}} </p>
+		</div>
+
+		<div class="opcoes">
+			<ul>
+				<li><a href="/cadastrardevice?idgrupo={{grupo.id}}" id="acadastrardevices{{grupo.id}}">Cadastrar</a></li>
+				<li><a href="/listardevices?idgrupo={{grupo.id}}" id="alistdevices{{grupo.id}}">Listar</a></li>
+				<li><a href="/editargrupo?idgrupo={{grupo.id}}" id="aeditgrupos{{grupo.id}}">Editar Grupo</a></li>
+				<li><a href="#" id="aexclgrupo{{grupo.id}}">Excluir Grupo</a></li>
+			</ul>
+		</div>
+
+
+		<form id="exclgrupof{{grupo.id}}" action="" method="POST"> {% csrf_token %}
+			<input type="hidden" id="idgrupo" name="idgrupo" value="{{grupo.id}}">
+			<input type="hidden" id="opfId1" name="opfId1" value="delete">
+		</form>
+
+			
+		<form id="editgrupof{{grupo.id}}" action="" method="POST"> {% csrf_token %}
+			<input type="hidden" id="opfId2" name="opfId2" value="{{grupo.id}}">
+		</form>
+
+
+		<form id="listdevicef{{grupo.id}}" action="/action_page.php" method="get">
+			<input type="hidden" id="opfId3" name="opfId3" value="3000">
+		</form>
+
+
+		<form id="caddevicef{{grupo.id}}" action="/action_page.php" method="get">
+			<input type="hidden" id="opfId4" name="opfId4" value="4000">
+		</form>
+
+
+	</div>
+	
+	{% endfor %}
+</div>
+
+
+
+
+<script type="text/javascript">
+	window.onload = function() {
+
+		{% for grupo in grupo_list %}
+	    document.getElementById('acadastrardevices{{grupo.id}}').onclick = function() {
+	        document.getElementById('caddevicef{{grupo.id}}').submit();
+	        return;
+	    };
+
+	    document.getElementById('alistdevices{{grupo.id}}').onclick = function() {
+	        document.getElementById('listdevicef{{grupo.id}}').submit();
+	        return;
+	    };
+
+	    document.getElementById('aeditgrupos{{grupo.id}}').onclick = function() {
+	        document.getElementById('editgrupof{{grupo.id}}').submit();
+	        return;
+	    };
+
+	    document.getElementById('aexclgrupo{{grupo.id}}').onclick = function() {
+	        document.getElementById('exclgrupof{{grupo.id}}').submit();
+	        return;
+	    };
+	    {% endfor %}
+	};
+</script>
+
+
+
+
+
+
+{% endblock %}

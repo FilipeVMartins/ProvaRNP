@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block corpo %}
+
+<div class="corposup">
+	<h1 style="float:left">Cadastrar Grupo</h1>
+</div>
+
+<div id="corpoinf" class="corpoinf">
+	<div>
+		<form method='POST'> {% csrf_token %}
+
+			{{ form_grupo.as_p }}
+
+			<input type="submit" value="Cadastrar" name="">
+		</form>
+	</div>
+</div>
+
+{% endblock %}

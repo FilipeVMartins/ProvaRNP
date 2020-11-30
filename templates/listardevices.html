@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+ 
+{% block corpo %}
+
+<div class="corposup">
+	<h1 style="float:left">Listar Devices</h1>
+	<div class="search-container">
+		<form action="/home">
+			<input type="text" placeholder="Pesquisar Devices" name="search">
+			<button type="submit">Buscar</button>
+		</form>
+	</div>
+</div>
+
+<div id="corpoinf" class="corpoinf">
+
+	{% for device in device_list %}
+
+	<div class="boxgrupod">
+
+		<div class="titulo">
+			<h3> {{device.nome}} <h3>
+		</div>
+
+		<div class="descricao">
+			<ul>
+				<li>Nome:</li>
+				<li>{{device.nome}}</li>
+			</ul>
+			<ul>
+				<li>Descrição:</li>
+				<li>{{device.descricao}}</li>
+			</ul>
+			<ul>
+				<li>Site:</li>
+				<li>{{device.site}}</li>
+			</ul>
+			<ul>
+				<li>Device Type:</li>
+				<li>{{device.device_type}}</li>
+			</ul>
+			<ul>
+				<li>IP address:</li>
+				<li>{{device.ipaddress}}</li>
+			</ul>
+			<ul>
+				<li>SSH port:</li>
+				<li>{{device.sshport}}</li>
+			</ul>
+		</div>
+
+		<div class="opcoes">
+			<ul>
+				<li><a href="/editardevice?iddevice={{device.id}}" id="aeditdevice{{device.id}}">Editar Device</a></li>
+				<li><a href="#" id="aexcldevice{{device.id}}">Excluir Device</a></li>
+			</ul>
+		</div>
+
+
+		<form id="excldevicef{{device.id}}" action="" method="POST"> {% csrf_token %}
+			<input type="hidden" id="iddevice" name="iddevice" value="{{device.id}}">
+			<input type="hidden" id="opfId1" name="opfId1" value="delete">
+		</form>
+
+			
+		<form id="editdevicef{{device.id}}" action="" method="POST"> {% csrf_token %}
+			<input type="hidden" id="opfId2" name="opfId2" value="{{device.id}}">
+		</form>
+
+
+	</div>
+	{% endfor %}
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		window.onload = function() {
+
+			{% for device in device_list %}
+
+		    document.getElementById('aeditdevice{{device.id}}').onclick = function() {
+		        document.getElementById('editdevicef{{device.id}}').submit();
+		        return;
+		    };
+
+		    document.getElementById('aexcldevice{{device.id}}').onclick = function() {
+		        document.getElementById('excldevicef{{device.id}}').submit();
+		        return;
+		    };
+		    {% endfor %}
+		};
+	</script>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}

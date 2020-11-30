@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block corpo %}
+
+<script type="text/javascript">
+	window.onload = function() {
+ 
+		document.getElementById("id_gruporouter").disabled = false;
+	};
+
+
+
+</script>
+
+<div class="corposup">
+	<h1 style="float:left">Cadastrar Devices</h1>
+</div>
+
+<div id="corpoinf" class="corpoinf">
+	<div>
+		<form method='POST'> {% csrf_token %}
+
+			{{ form_device.as_p }}
+
+			<input type="submit" value="Cadastrar" name="">
+		</form>
+	</div>
+</div>
+
+{% endblock %}

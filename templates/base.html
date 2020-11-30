@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>openNetAudit</title>
+
+	<style type="text/css">
+        html, body {
+        	width: 100%;
+	        height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica, sans-serif;
+        }
+
+		header {
+            height: 9%;
+            margin: 0;
+            padding-left:7%;
+            padding-right: 7%;
+            background-color: #c4c4c4;
+        }
+
+		.logornp1{
+			width: 7.5%;
+            height: auto;
+        	margin-top: 15px;
+        	margin-bottom: -10px;
+            padding: 0;
+
+		}
+		.logonavbar{
+			width: 120px;
+            height: 46px;
+            padding: 0;
+		}
+
+		.logonavbarlinkpadding0{
+			padding: 0;
+			margin-right: 30px;
+		}
+
+		.imgfooter{
+			width: 15%;
+            height: auto;
+            padding: 0;
+		}
+
+
+		.corpo {
+            height: 77%;
+            margin: 0;
+            padding-left:7%;
+            padding-right: 7%;
+            background-color: white;
+        }
+
+        nav {
+
+        	float: right;
+        	height: auto;
+        	width: auto;
+        	margin-top: 15px;
+        	margin-bottom: -10px;
+        }
+
+		nav ul {
+		  	list-style-type: none;
+		  	margin: 0;
+		  	padding: 0;
+		  	overflow: hidden;
+		}
+
+		nav ul li {
+		  	float: left;
+		}
+
+		nav ul li a {
+			width: 100px;
+			height: auto;
+		  	display: block;
+		  	color: #666;
+		  	text-align: center;
+		  	padding: 14px 16px;
+		  	margin: 0;
+		  	text-decoration: none;
+		}
+
+		nav ul li a:hover:not(.active) {
+		  	background-color: #ddd;
+		}
+
+		nav ul li a.active {
+		  	color: white;
+		  	background-color: darkgray;
+		}
+
+ 		footer {
+            height: 14%;
+            margin: 0;
+            padding-left:7%;
+            padding-right: 7%;
+            background-color: #c4c4c4;
+            align-items: center;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+        }
+
+        .footerlist li {
+        	float: left;
+        	width: 200px;
+        	height: auto;
+        	list-style-type: none;
+
+        }
+
+        .acadastrargrupos {
+        	float: right;
+        	text-align: center;
+        	color: black;
+            text-decoration: none;
+            border: 1px solid black;
+            padding: 0.8% 1%;
+            margin-top: 1%;
+            margin-right: 1%;
+            width: 120px;
+            background-color: #c4c4c4;
+        }
+        .acadastrargrupos:hover {
+            background-color: #ddd;
+
+        }
+
+
+
+
+
+
+
+		.corposup {
+			overflow: hidden;
+			padding-top: 10px;
+			padding-bottom: 20px;
+			}
+
+		.corposup .search-container {
+			float: right;
+			margin-top: 10px;
+			}
+
+		.corposup input[type=text] {
+			padding: 12px 45px;
+			margin-top: 8px;
+			font-size: 17px;
+			border: 1px solid black;
+			background-color: #c4c4c4;
+			}
+
+		.corposup .search-container button {
+			float: right;
+			padding: 12px 45px;
+			margin-top: 8px;
+			margin-right: 16px;
+			background: #c4c4c4;
+			font-size: 17px;
+			border: 1px solid black;
+			border-left: none;
+			cursor: pointer;
+			}
+
+		.corposup .search-container button:hover {
+			background: #ddd;
+			}
+
+		@media screen and (max-width: 600px) {
+				.corposup .search-container {
+				float: none;
+				}
+			}
+
+
+		.corpoinf{
+			width: 100%;
+			height: 100%;
+		}
+
+		.boxgrupo {
+			width: 47%;
+            height: 35%;
+            background-color: #c4c4c4;
+            float:left;
+            margin: 1%;
+		}
+		.boxgrupo .titulo h3{
+			margin-left: 3%;			
+		}
+		.boxgrupo .descricao p {
+			height: 90px;
+			width: 100%;
+			margin-left: 3%;
+		}
+        .boxgrupo .opcoes ul {
+            margin:0;
+            padding:0;
+            text-align: center;
+        }
+		.boxgrupo .opcoes ul li{
+			list-style-type:none;
+			display: inline;
+		}
+		.boxgrupo .opcoes ul li a {
+			color: black;
+            text-decoration: none;
+            border: 1px solid black;
+            padding: 2% 2%;
+            display: inline-block;
+            margin-right: 1%;
+            width: 120px;
+		}
+        .boxgrupo .opcoes ul li a:hover {
+            background-color: #ddd;
+        }
+
+
+
+
+		.corpoinf{
+			width: 100%;
+			height: 100%;
+		}
+		.boxgrupod {
+			width: 25%;
+            height: 35%;
+            background-color: #c4c4c4;
+            float:left;
+            margin: 1%;
+		}
+
+		.boxgrupod .titulo h3{
+			margin-left: 3%;			
+		}
+		.boxgrupod .descricao ul {
+			height: auto;
+			width: 90%;
+			padding: 0;
+			margin: 0.2%;
+			margin-left: 3%;
+			list-style-type: none;
+			display: inline-block;
+		}
+		.boxgrupod .descricao ul li {
+			float: left;
+			
+		}
+		.boxgrupod .descricao ul li:nth-child(1) {
+			width: 35%
+		}
+
+
+
+
+
+        .boxgrupod .opcoes ul {
+            margin:0;
+            padding:0;
+            text-align: center;
+        }
+		.boxgrupod .opcoes ul li{
+			list-style-type:none;
+			display: inline;
+		}
+		.boxgrupod .opcoes ul li a {
+			color: black;
+            text-decoration: none;
+            border: 1px solid black;
+            padding: 2% 2%;
+            display: inline-block;
+            margin-right: 1%;
+            margin-top: 1%;
+            width: 120px;
+		}
+        .boxgrupod .opcoes ul li a:hover {
+            background-color: #ddd;
+        }
+
+
+
+	</style>
+
+</head>
+<body>
+	<header>
+
+		<img class="logornp1" src="{% static 'pages/logo_header_rnp.jpg' %}" alt="RNP logo">
+
+		<nav>
+			<ul>
+	            <li ><a class="logonavbarlinkpadding0" href="/home"><img class="logonavbar" src="{% static 'pages/logo_navbar_opennetaudit1.jpg' %}" alt="openNetAudit logo"></a></li>
+	            <li><a class="active" href="/home">Página Inicial</a></li>
+	            <li><a href="/inventario">Inventário</a></li>
+	            	<!--
+	            	<ul> 
+                        <li><a href="#devices">Devices</a></li>
+                        <li><a href="#baseref">Base de referência</a></li>
+                    </ul>
+                    --> 
+	            <li><a href="/auditoria">Auditoria</a></li>
+	            <li><a href="/relatorios">Relatórios</a></li>
+	            <li><a href="/admin1">Admin</a></li>
+	            <li><a href="/perfil">Perfil</a>
+	            	<!--
+	            	<ul> 
+                        <li><a href="#logout">Logout</a></li>
+                    </ul>
+                    --> 
+	            </li>
+			</ul>
+		<nav>
+    </header>
+
+
+
+		
+
+    <section class="corpo">
+    	
+    	{% block corpo %}
+		{% endblock %}
+
+    </section>
+
+
+
+
+
+	<footer>
+		<img class="imgfooter" src="{% static 'pages/logo_footer_rnp.jpg' %}" alt="RNP logo">
+
+		<ul class="footerlist">
+			<li>MINISTÉRIO DO <br><b>TURISMO</b></li>
+			<li>MINISTÉRIO DA <br><b>DEFESA</b></li>
+			<li>MINISTÉRIO DA <br><b>SAÚDE</b></li>
+			<li>MINISTÉRIO DA <br><b>EDUCAÇÃO</b></li>
+			<li>MINISTÉRIO DA <br><b>CIENCIA, TECNOLOGIA, INOVAÇÕES E COMUNICAÇÕES</b></li>
+		</ul>
+
+		<img class="imgfooter" src="{% static 'pages/logo_footer_brasilgov.jpg' %}" alt="RNP logo">
+	</footer>
+</body>
+</html>
