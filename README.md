@@ -29,7 +29,7 @@
 2- Excluir Device: Permite excluir um Device do Grupo que está sendo listado.
 
 
-OBS: 
- -Django administration: Username: master / Password: admin.
+OBS:
+-Django administration: Username: master / Password: admin.
 
 
