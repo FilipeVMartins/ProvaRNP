@@ -11,7 +11,10 @@
  3- "Editar Grupo": Permite editar as informações de um Grupo cadastrado.
  4- "Excluir Grupo": Permite excluir um Grupo cadastrado.
  
+ 
  A opção Listar de cada caixa de um Grupo acima irá exibir em nova tela todos os Devices cadastrados para aquele grupo, em caixas, contendo suas informações cadastradas e cada caixa apresentando 2 opções, sendo elas:
+ 
 1- Editar Device: Permite editar as informações de um Device do Grupo que está sendo listado.
+
 2- Excluir Device: Permite excluir um Device do Grupo que está sendo listado.
 
