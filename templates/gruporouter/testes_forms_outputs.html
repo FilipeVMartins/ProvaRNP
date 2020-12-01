@@ -1,0 +1,143 @@
+
+<!-- Arquivo apenas para vizualização dos forms do django -->
+
+<!-- Cadastrar e Editar Grupo -->
+<div class="corposup">
+	<h1 style="float:left">Cadastrar Grupo</h1>
+</div>
+
+<div id="corpoinf" class="corpoinf">
+	<div class="form-container">
+		<form method='POST'> 
+			<input type="hidden" name="csrfmiddlewaretoken" value="eQHspsqyGWF4uto8mbd6dEfW4bDG2zF2RCRcLWnKXNBpRXAvtkPbelwUTRC4TYUS">
+			<p>
+				<label for="id_nome">Nome:</label>
+				<input type="text" name="nome" maxlength="50" required id="id_nome">
+			</p>
+			<p>
+				<label for="id_descricao">Descrição:</label>
+				<textarea name="descricao" cols="40" rows="10" required id="id_descricao"></textarea>
+			</p>
+			<input type="submit" value="Cadastrar" name="">
+		</form>
+	</div>
+</div>
+
+
+<!-- Cadastrar e Editar Device -->
+<div class="corposup">
+	<h1 style="float:left">Cadastrar Devices</h1>
+</div>
+
+<div id="corpoinf" class="corpoinf">
+	<div class="form-container formd-container">
+		<form method='POST'> <input type="hidden" name="csrfmiddlewaretoken" value="x2jdlRBEY4QpDpZtPutB3CNjchrfxxJMaOtXHlyQfVMK0TbQWD5G4j4h1XqDoWYC">
+
+			<p>
+				<label for="id_nome">Nome:</label>
+				<input type="text" name="nome" maxlength="12" required id="id_nome">
+			</p>
+			<p>
+				<label for="id_descricao">Descrição:</label>
+				<textarea name="descricao" cols="40" rows="10" required id="id_descricao"></textarea>
+			</p>
+			<p>
+				<label for="id_site">Site:</label>
+				<select name="site" required id="id_site">
+
+					<option value="" selected>Estados do Brasil</option>
+
+					<option value="AC">Acre</option>
+
+					<option value="AL">Alagoas</option>
+
+					<option value="AP">Amapá</option>
+
+					<option value="AM">Amazonas</option>
+
+					<option value="BA">Bahia</option>
+
+					<option value="CE">Ceará</option>
+
+					<option value="DF">Distrito Federal</option>
+
+					<option value="ES">Espírito Santo</option>
+
+					<option value="GO">Goiás</option>
+
+					<option value="MA">Maranhão</option>
+
+					<option value="MT">Mato Grosso</option>
+
+					<option value="MS">Mato Grosso do Sul</option>
+
+					<option value="MG">Minas Gerais</option>
+
+					<option value="PA">Pará</option>
+
+					<option value="PB">Paraíba</option>
+
+					<option value="PR">Paraná</option>
+
+					<option value="PE">Pernambuco</option>
+
+					<option value="PI">Piauí</option>
+
+					<option value="RR">Roraima</option>
+
+					<option value="RO">Rondônia</option>
+
+					<option value="RJ">Rio de Janeiro</option>
+
+					<option value="RN">Rio Grande do Norte</option>
+
+					<option value="RS">Rio Grande do Sul</option>
+
+					<option value="SC">Santa Catarina</option>
+
+					<option value="SP">São Paulo</option>
+
+					<option value="SE">Sergipe</option>
+
+					<option value="TO">Tocantins</option>
+
+				</select>
+			</p>
+			<p>
+				<label for="id_device_type">Device Type:</label>
+				<select name="device_type" required id="id_device_type">
+					<option value="" selected>---------</option>
+
+					<option value="JU">Juniper</option>
+
+					<option value="CI">Cisco</option>
+
+					<option value="EX">Extreme</option>
+
+					<option value="HU">Huawei</option>
+
+				</select>
+			</p>
+			<p>
+				<label for="id_ipaddress">IP address:</label> 
+				<input type="text" name="ipaddress" required id="id_ipaddress">
+			</p>
+			<p>
+				<label for="id_sshport">SSH port:</label> 
+				<input type="text" name="sshport" maxlength="4" required id="id_sshport">
+			</p>
+			<p>
+				<label for="id_gruporouter">Gruporouter:</label> 
+				<select name="gruporouter" required id="id_gruporouter">
+					<option value="">---------</option>
+
+					<option value="1" selected>GrupoRouter object (1)</option>
+
+					<option value="3">GrupoRouter object (3)</option>
+
+					<option value="21">GrupoRouter object (21)</option>
+
+				</select>
+			</p>
+			<input type="submit" value="Cadastrar" name="">
+		</form>
